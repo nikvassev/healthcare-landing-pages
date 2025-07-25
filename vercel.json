@@ -1,54 +1,59 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/(.*)",
-      "destination": "/mental-health/index.html",
+      "destination": "/mental-health/",
       "has": [
         {
           "type": "host",
           "value": "mentalhealth.novobeing.co"
         }
-      ]
+      ],
+      "permanent": false
     },
     {
       "source": "/(.*)",
-      "destination": "/addiction/index.html",
+      "destination": "/addiction/",
       "has": [
         {
           "type": "host",
           "value": "addiction.novobeing.co"
         }
-      ]
+      ],
+      "permanent": false
     },
     {
       "source": "/(.*)",
-      "destination": "/iv-therapy/index.html",
+      "destination": "/iv-therapy/",
       "has": [
         {
           "type": "host",
           "value": "ivtherapy.novobeing.co"
         }
-      ]
+      ],
+      "permanent": false
     },
     {
       "source": "/(.*)",
-      "destination": "/senior-living/index.html",
+      "destination": "/senior-living/",
       "has": [
         {
           "type": "host",
           "value": "seniorliving.novobeing.co"
         }
-      ]
+      ],
+      "permanent": false
     },
     {
       "source": "/(.*)",
-      "destination": "/palliative-care/index.html",
+      "destination": "/palliative-care/",
       "has": [
         {
           "type": "host",
           "value": "palliativecare.novobeing.co"
         }
-      ]
+      ],
+      "permanent": false
     }
   ]
 }
