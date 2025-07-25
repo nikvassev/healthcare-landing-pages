@@ -4,214 +4,467 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform Your Treatment Center with Immersive VR Therapy | Novobeing</title>
+    <meta name="description" content="Help patients overcome withdrawal symptoms and cravings with evidence-based virtual reality interventions that reduce relapse rates">
     <style>
+        :root {
+            --primary-blue: #4A90E2;
+            --primary-purple: #7B68EE;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --background-light: #F8F9FA;
+            --white: #FFFFFF;
+            --border-light: #E9ECEF;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-dark);
+            background-color: var(--white);
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
+        /* Header */
         header {
-            background: #4F46E5;
-            color: white;
-            padding: 1rem 0;
+            background: var(--white);
+            box-shadow: var(--shadow);
             position: fixed;
-            width: 100%;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
-        
+
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
+            color: var(--primary-blue);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
-        
+
         .nav-links a {
-            color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-        
-        .cta-button {
-            background: white;
-            color: #4F46E5;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
+            color: var(--text-dark);
             font-weight: 500;
-            transition: transform 0.3s;
+            transition: color 0.3s ease;
         }
-        
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .cta-button {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
         .cta-button:hover {
             transform: translateY(-2px);
         }
-        
-        main {
-            margin-top: 80px;
-        }
-        
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
-            color: white;
-            padding: 4rem 0;
+            background: var(--background-light);
+            padding: 120px 0 80px;
             text-align: center;
         }
-        
+
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
             font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
+
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            color: var(--text-light);
             margin-bottom: 2rem;
-            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
-        .hero-cta {
-            background: #10B981;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s;
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-top: 2rem;
         }
-        
-        .hero-cta:hover {
-            background: #059669;
-            transform: translateY(-2px);
+
+        /* Problem Section */
+        .problem {
+            padding: 80px 0;
+            background: var(--white);
         }
-        
-        .section {
-            padding: 4rem 0;
+
+        .problem-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
-        
-        .section h2 {
+
+        .problem h2 {
             font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #1F2937;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
         }
-        
+
+        .problem p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Features Section */
         .features {
+            padding: 80px 0;
+            background: var(--background-light);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
         }
-        
-        .feature {
-            background: white;
+
+        .feature-card {
+            background: var(--white);
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
             text-align: center;
+            transition: transform 0.3s ease;
         }
-        
-        .feature h3 {
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #DC2626;
-        }
-        
-        .testimonials {
-            background: #F9FAFB;
-        }
-        
-        .testimonial {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .testimonial blockquote {
-            font-style: italic;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        .testimonial cite {
             font-weight: 600;
-            color: #DC2626;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
         }
-        
-        .pricing {
-            background: #1F2937;
-            color: white;
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .benefits h2 {
             text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
         }
-        
-        .pricing h2 {
-            color: white;
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
-        
-        .price-card {
-            background: white;
-            color: #1F2937;
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--background-light);
+            border-radius: 12px;
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .benefit-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--background-light);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: var(--white);
             padding: 2rem;
-            border-radius: 10px;
-            max-width: 400px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial blockquote {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .testimonial-title {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .step p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+            background: var(--background-light);
+        }
+
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
             margin: 0 auto;
         }
-        
-        .price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #DC2626;
-            margin-bottom: 1rem;
+
+        .pricing-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            text-align: center;
         }
-        
-        .price-features {
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-description {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
             list-style: none;
             margin-bottom: 2rem;
         }
-        
-        .price-features li {
+
+        .features-list li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #E5E7EB;
+            color: var(--text-dark);
         }
-        
+
+        .features-list li:before {
+            content: "✓";
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 80px 0;
+            background: var(--gradient);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .final-cta .cta-button {
+            background: var(--white);
+            color: var(--primary-blue);
+            font-size: 1.125rem;
+            padding: 1rem 2rem;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
             .nav-links {
                 display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .problem-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid,
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -223,11 +476,12 @@
             <ul class="nav-links">
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#clinical-data">Clinical Data</a></li>
-                <li><a href="#included">What's Included</a></li>
+                <li><a href="#whats-included">What's Included</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#get-started">Get Started</a></li>
             </ul>
-            <a href="#get-started" class="cta-button">Get Started</a>
+            <a href="#get-started" class="cta-button">Yes, I Want This! →</a>
         </nav>
     </header>
 
@@ -236,98 +490,183 @@
             <div class="container">
                 <h1>Transform Your Treatment Center with Immersive VR Therapy</h1>
                 <p>Help patients overcome withdrawal symptoms and cravings with evidence-based virtual reality interventions that reduce relapse rates</p>
-                <a href="#get-started" class="hero-cta">Yes, I Want This! →</a>
+                <a href="#get-started" class="cta-button">Yes, I Want This! →</a>
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Person using VR headset in nature setting" class="hero-image">
             </div>
         </section>
 
-        <section class="section" id="benefits">
+        <section class="problem">
             <div class="container">
-                <h2>A New Way</h2>
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">A first-of-its-kind immersive well-being solution designed to help patients feel calmer, more connected, and in control of their healing journey</p>
-                
-                <div class="features">
-                    <div class="feature">
+                <div class="problem-content">
+                    <div>
+                        <h2>When acute withdrawal meets overwhelming cravings...</h2>
+                        <p>Managing patients through severe withdrawal symptoms while battling intense cravings creates an overwhelming challenge for treatment centers. Traditional methods often fall short when patients need immediate relief. Novobeing provides evidence-based VR interventions that interrupt cravings instantly and help patients develop real-time coping mechanisms for lasting recovery.</p>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Treatment center environment" style="width: 100%; border-radius: 12px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="whats-included">
+            <div class="container">
+                <h2>See How Novobeing Transforms Addiction Treatment with Immersive VR Therapy</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
                         <h3>Therapeutic Experiences</h3>
                         <p>Evidence-based modules designed to reset the nervous system and enhance mood.</p>
                     </div>
-                    <div class="feature">
+                    <div class="feature-card">
                         <h3>Nature Escapes</h3>
                         <p>Serene photorealistic landscapes to reduce anxiety and promote relaxation.</p>
                     </div>
-                    <div class="feature">
+                    <div class="feature-card">
                         <h3>Interactive Breathing</h3>
                         <p>Interactive breathwork and meditation sessions to induce calm and regulate stress quickly.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <section class="benefits" id="benefits">
+            <div class="container">
                 <h2>What you will get:</h2>
-                <div class="features">
-                    <div class="feature">
-                        <h3>Immediate Craving Interruption</h3>
-                        <p>Interrupt cravings instantly through immersive distraction protocols and guided breathwork that reset the nervous system during critical moments of vulnerability.</p>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <div class="benefit-content">
+                            <h3>Immediate Craving Interruption</h3>
+                            <p>Interrupt cravings instantly through immersive distraction protocols and guided breathwork that reset the nervous system during critical moments of vulnerability.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>24/7 On-Demand Support</h3>
-                        <p>Provide round-the-clock access to therapeutic interventions, reducing emergency calls and staff overtime while ensuring patients have support when they need it most.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🕐</div>
+                        <div class="benefit-content">
+                            <h3>24/7 On-Demand Support</h3>
+                            <p>Provide round-the-clock access to therapeutic interventions, reducing emergency calls and staff overtime while ensuring patients have support when they need it most.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Evidence-Based Programs</h3>
-                        <p>Deliver scientifically validated VR experiences designed specifically for therapeutic applications.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔬</div>
+                        <div class="benefit-content">
+                            <h3>Evidence-Based Programs</h3>
+                            <p>Deliver scientifically validated VR experiences designed specifically for therapeutic applications.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Enhanced Therapy Engagement</h3>
-                        <p>Transform resistant patients into active participants with immersive experiences that break down barriers traditional therapy methods can't reach.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-content">
+                            <h3>Enhanced Therapy Engagement</h3>
+                            <p>Transform resistant patients into active participants with immersive experiences that break down barriers traditional therapy methods can't reach.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Staff Burnout Prevention</h3>
-                        <p>Give your counselors powerful tools to provide consistent, effective support without the constant demand for one-on-one crisis intervention.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💆</div>
+                        <div class="benefit-content">
+                            <h3>Staff Burnout Prevention</h3>
+                            <p>Give your counselors powerful tools to provide consistent, effective support without the constant demand for one-on-one crisis intervention.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Plug-and-Play Simplicity</h3>
-                        <p>No technical expertise required with a system that works right out of the box with minimal setup.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔌</div>
+                        <div class="benefit-content">
+                            <h3>Plug-and-Play Simplicity</h3>
+                            <p>No technical expertise required with a system that works right out of the box with minimal setup.</p>
+                        </div>
                     </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="font-size: 1.125rem; color: var(--text-dark); font-weight: 600;">And the best part? It only takes 5 minutes to set up and start using.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section testimonials" id="testimonials">
+        <section class="testimonials" id="testimonials">
             <div class="container">
                 <h2>Trusted by leading addiction treatment professionals</h2>
-                
-                <div class="testimonial">
-                    <blockquote>"Being able to have a tool like this to provide on-demand meditation and travel has helped us tremendously. Patients can relax and take a virtual mental health break, manage cravings in real-time and absolutely love this."</blockquote>
-                    <cite>Dr. Michael Chen - Medical Director, Sunrise Recovery Center</cite>
-                </div>
-
-                <div class="testimonial">
-                    <blockquote>"When patients are in the thick of detox, traditional talk therapy often falls short - they're too uncomfortable to engage meaningfully. But with Novobeing, we can immediately redirect their focus through immersive breathwork sessions and calming virtual environments."</blockquote>
-                    <cite>Sarah Williams, LCSW - Clinical Director, New Horizons Treatment Center</cite>
-                </div>
-
-                <div class="testimonial">
-                    <blockquote>"Novobeing's 24/7 accessibility has transformed our patient satisfaction scores. When patients have cravings at 2 AM, they can access immediate support instead of calling our crisis line. Our staff can focus on complex cases while technology handles routine interventions."</blockquote>
-                    <cite>Dr. Jennifer Martinez - Executive Director, Valley Addiction Recovery Institute</cite>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <blockquote>"Being able to have a tool like this to provide on-demand meditation and travel has helped us tremendously. Patients can relax and take a virtual mental health break, manage cravings in real-time and absolutely love this."</blockquote>
+                        <div class="testimonial-author">Dr. Michael Chen</div>
+                        <div class="testimonial-title">Medical Director, Sunrise Recovery Center</div>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>"When patients are in the thick of detox, traditional talk therapy often falls short - they're too uncomfortable to engage meaningfully. But with Novobeing, we can immediately redirect their focus through immersive breathwork sessions and calming virtual environments."</blockquote>
+                        <div class="testimonial-author">Sarah Williams, LCSW</div>
+                        <div class="testimonial-title">Clinical Director, New Horizons Treatment Center</div>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>"Novobeing's 24/7 accessibility has transformed our patient satisfaction scores. When patients have cravings at 2 AM, they can access immediate support instead of calling our crisis line. Our staff can focus on complex cases while technology handles routine interventions."</blockquote>
+                        <div class="testimonial-author">Dr. Jennifer Martinez</div>
+                        <div class="testimonial-title">Executive Director, Valley Addiction Recovery Institute</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section pricing" id="pricing">
+        <section class="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Order Your Headsets</h3>
+                        <p>Order a Novobeing Kit that includes all software, hardware and accessories you need to offer Therapeutic VR.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Set Up Your System</h3>
+                        <p>Connect the headset to Wi-Fi, complete the onboarding steps, and install the optional wall mount if desired. No IT support required.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Invite Clients to Use It</h3>
+                        <p>Deploy the headset in a designated area and offer to your clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing" id="pricing">
             <div class="container">
                 <h2>Special Limited-Time Offer</h2>
-                <div class="price-card">
-                    <div class="price">$699 one-time + $150/month</div>
-                    <ul class="price-features">
-                        <li>Meta Quest 3 Headset</li>
-                        <li>Full Accessories Kit</li>
-                        <li>Wall Mount</li>
-                        <li>Novobeing Software Suite</li>
-                        <li>50+ Therapeutic Experiences</li>
-                        <li>Premium Support</li>
-                        <li>Regular Content Updates</li>
-                        <li>30-day money-back guarantee</li>
-                    </ul>
-                    <a href="#get-started" class="hero-cta" id="get-started">Yes, I Want This Now →</a>
+                <div class="pricing-cards">
+                    <div class="pricing-card">
+                        <h3>One-Time Cost</h3>
+                        <div class="price">$699</div>
+                        <div class="price-description">Device, accessories & shipping</div>
+                        <ul class="features-list">
+                            <li>Meta Quest 3 Headset</li>
+                            <li>Full Accessories Kit</li>
+                            <li>Wall Mount</li>
+                            <li>Shipping</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Monthly Subscription</h3>
+                        <div class="price">$150<span style="font-size: 1rem;">/month</span></div>
+                        <div class="price-description">Monthly software subscription</div>
+                        <ul class="features-list">
+                            <li>Novobeing Software Suite</li>
+                            <li>50+ Therapeutic Experiences</li>
+                            <li>Premium Support</li>
+                            <li>Regular Content Updates</li>
+                        </ul>
+                    </div>
                 </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="font-size: 1.125rem; color: var(--text-dark); font-weight: 600;">100% Satisfaction Guaranteed</p>
+                    <p style="color: var(--text-light); margin-top: 0.5rem;">Experience Novobeing risk-free with our 30-day money-back guarantee. If you're not completely satisfied, simply cancel within the first 30 days for a full refund—no questions asked.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" id="get-started">
+            <div class="container">
+                <h2>Ready to transform your treatment center?</h2>
+                <p>$699 one-time payment + $150/month</p>
+                <a href="#" class="cta-button">Yes, I Want This Now →</a>
             </div>
         </section>
     </main>
