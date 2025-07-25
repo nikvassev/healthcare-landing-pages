@@ -1,0 +1,7 @@
+# Subdomain routing for landing pages
+https://mentalhealth.novobeing.co/* https://healthcare-landing-pages.vercel.app/mentalhealth.html 200
+https://addiction.novobeing.co/* https://healthcare-landing-pages.vercel.app/addiction.html 200
+https://ivtherapy.novobeing.co/* https://healthcare-landing-pages.vercel.app/ivtherapy.html 200
+https://seniorliving.novobeing.co/* https://healthcare-landing-pages.vercel.app/seniorliving.html 200
+https://palliativecare.novobeing.co/* https://healthcare-landing-pages.vercel.app/palliativecare.html 200
+
