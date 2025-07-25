@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform Your Practice with Immersive VR Therapy | Novobeing</title>
     <meta name="description" content="Help clients achieve breakthrough results with evidence-based virtual reality experiences">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary-color: #4285f4;
-            --secondary-color: #34a853;
-            --accent-color: #fbbc04;
-            --text-primary: #202124;
-            --text-secondary: #5f6368;
-            --background-light: #f8f9fa;
-            --border-light: #dadce0;
-            --white: #ffffff;
-            --shadow: 0 2px 10px rgba(0,0,0,0.1);
-            --gradient-primary: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            --primary-color: #4F46E5;
+            --primary-dark: #3730A3;
+            --secondary-color: #10B981;
+            --accent-color: #F59E0B;
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+            --text-light: #9CA3AF;
+            --background-primary: #FFFFFF;
+            --background-secondary: #F9FAFB;
+            --background-accent: #EEF2FF;
+            --border-color: #E5E7EB;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
         * {
@@ -26,122 +35,153 @@
         }
 
         body {
-            font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
-            background: var(--white);
+            background: var(--background-primary);
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 1.5rem;
         }
 
         /* Header */
         header {
-            background: var(--white);
-            box-shadow: var(--shadow);
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
             z-index: 1000;
+            transition: all 0.3s ease;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 0;
+            padding: 1rem 0;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 24px;
-            font-weight: 600;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--primary-color);
+            text-decoration: none;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 32px;
+            gap: 2rem;
             align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-primary);
+            color: var(--text-secondary);
             font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 8px;
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
             transition: all 0.3s ease;
+            position: relative;
         }
 
         .nav-links a:hover {
-            background: var(--background-light);
             color: var(--primary-color);
+            background: var(--background-accent);
         }
 
         .cta-button {
-            background: var(--gradient-primary);
-            color: var(--white);
-            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 24px;
+            border-radius: 0.75rem;
             font-weight: 600;
+            font-size: 0.875rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-md);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: var(--shadow-lg);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
-            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--background-secondary) 0%, var(--background-accent) 100%);
+            padding: 8rem 0 4rem;
             min-height: 100vh;
             display: flex;
             align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234F46E5' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
         }
 
         .hero-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 4rem;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-text h1 {
-            font-size: 56px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            background: var(--gradient-primary);
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-color) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .hero-text p {
-            font-size: 20px;
+            font-size: 1.25rem;
             color: var(--text-secondary);
-            margin-bottom: 32px;
-            line-height: 1.6;
+            margin-bottom: 2rem;
+            line-height: 1.7;
         }
 
         .hero-image {
             position: relative;
-            border-radius: 24px;
+            border-radius: 1.5rem;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-xl);
+            transform: rotate(2deg);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: rotate(0deg);
         }
 
         .hero-image img {
@@ -152,35 +192,35 @@
 
         /* Problem Section */
         .problem {
-            padding: 100px 0;
-            background: var(--white);
+            padding: 6rem 0;
+            background: var(--background-primary);
         }
 
         .problem-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            gap: 5rem;
             align-items: center;
         }
 
         .problem h2 {
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: 700;
             line-height: 1.2;
-            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
             color: var(--text-primary);
         }
 
         .problem p {
-            font-size: 18px;
+            font-size: 1.125rem;
             color: var(--text-secondary);
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .problem-image {
-            border-radius: 16px;
+            border-radius: 1rem;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-lg);
         }
 
         .problem-image img {
@@ -191,23 +231,23 @@
 
         /* Features Section */
         .features {
-            padding: 100px 0;
-            background: var(--background-light);
+            padding: 6rem 0;
+            background: var(--background-secondary);
         }
 
         .features h2 {
             text-align: center;
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
             color: var(--text-primary);
         }
 
         .features-subtitle {
             text-align: center;
-            font-size: 20px;
+            font-size: 1.25rem;
             color: var(--text-secondary);
-            margin-bottom: 80px;
+            margin-bottom: 5rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -216,100 +256,103 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            gap: 2.5rem;
         }
 
         .feature-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
+            background: var(--background-primary);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
             text-align: center;
             transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
         }
 
         .feature-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 24px;
-            font-size: 32px;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
         }
 
         .feature-card h3 {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
             color: var(--text-primary);
         }
 
         .feature-card p {
             color: var(--text-secondary);
             line-height: 1.6;
-            font-size: 16px;
         }
 
         /* Benefits Section */
         .benefits {
-            padding: 100px 0;
-            background: var(--white);
+            padding: 6rem 0;
+            background: var(--background-primary);
         }
 
         .benefits h2 {
             text-align: center;
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 80px;
+            margin-bottom: 5rem;
             color: var(--text-primary);
         }
 
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 32px;
+            gap: 2rem;
         }
 
         .benefit-item {
             display: flex;
             align-items: flex-start;
-            gap: 20px;
-            padding: 32px;
-            background: var(--background-light);
-            border-radius: 16px;
+            gap: 1.25rem;
+            padding: 2rem;
+            background: var(--background-secondary);
+            border-radius: 1rem;
             transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
         }
 
         .benefit-item:hover {
             transform: translateY(-4px);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
         }
 
         .benefit-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
+            width: 3.75rem;
+            height: 3.75rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 0.75rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            font-size: 24px;
+            color: white;
+            font-size: 1.5rem;
             flex-shrink: 0;
         }
 
         .benefit-content h3 {
-            font-size: 20px;
+            font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             color: var(--text-primary);
         }
 
@@ -320,105 +363,108 @@
 
         /* Testimonials */
         .testimonials {
-            padding: 100px 0;
-            background: var(--background-light);
+            padding: 6rem 0;
+            background: var(--background-secondary);
         }
 
         .testimonials h2 {
             text-align: center;
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 80px;
+            margin-bottom: 5rem;
             color: var(--text-primary);
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
+            gap: 2.5rem;
         }
 
         .testimonial {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
+            background: var(--background-primary);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
             position: relative;
+            border: 1px solid var(--border-color);
         }
 
         .testimonial::before {
             content: '"';
             position: absolute;
-            top: -10px;
-            left: 40px;
-            font-size: 80px;
+            top: -0.5rem;
+            left: 2.5rem;
+            font-size: 5rem;
             color: var(--primary-color);
             opacity: 0.3;
+            font-family: serif;
         }
 
         .testimonial blockquote {
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 1.125rem;
+            line-height: 1.7;
             color: var(--text-primary);
-            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
             font-style: italic;
         }
 
         .testimonial-author {
             font-weight: 600;
             color: var(--primary-color);
-            margin-bottom: 4px;
+            margin-bottom: 0.25rem;
         }
 
         .testimonial-title {
             color: var(--text-secondary);
-            font-size: 14px;
+            font-size: 0.875rem;
         }
 
         /* How It Works */
         .how-it-works {
-            padding: 100px 0;
-            background: var(--white);
+            padding: 6rem 0;
+            background: var(--background-primary);
         }
 
         .how-it-works h2 {
             text-align: center;
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 80px;
+            margin-bottom: 5rem;
             color: var(--text-primary);
         }
 
         .steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 2.5rem;
         }
 
         .step {
             text-align: center;
-            padding: 40px 20px;
+            padding: 2.5rem 1.25rem;
             position: relative;
         }
 
         .step-number {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-primary);
-            color: var(--white);
+            width: 5rem;
+            height: 5rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 2rem;
             font-weight: bold;
-            margin: 0 auto 24px;
+            margin: 0 auto 1.5rem;
+            box-shadow: var(--shadow-lg);
         }
 
         .step h3 {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
             color: var(--text-primary);
         }
 
@@ -429,106 +475,108 @@
 
         /* Pricing */
         .pricing {
-            padding: 100px 0;
-            background: var(--background-light);
+            padding: 6rem 0;
+            background: var(--background-secondary);
         }
 
         .pricing h2 {
             text-align: center;
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 80px;
+            margin-bottom: 5rem;
             color: var(--text-primary);
         }
 
         .pricing-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            gap: 2.5rem;
             max-width: 900px;
             margin: 0 auto;
         }
 
         .pricing-card {
-            background: var(--white);
-            padding: 48px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
+            background: var(--background-primary);
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
             text-align: center;
             position: relative;
             transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
         }
 
         .pricing-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
         }
 
         .pricing-card h3 {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
             color: var(--text-primary);
         }
 
         .price {
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: 700;
             color: var(--primary-color);
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
         }
 
         .price-description {
             color: var(--text-secondary);
-            margin-bottom: 32px;
+            margin-bottom: 2rem;
         }
 
         .features-list {
             list-style: none;
-            margin-bottom: 32px;
+            margin-bottom: 2rem;
             text-align: left;
         }
 
         .features-list li {
-            padding: 8px 0;
+            padding: 0.5rem 0;
             color: var(--text-primary);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 0.75rem;
         }
 
         .features-list li::before {
             content: "✓";
             color: var(--secondary-color);
             font-weight: bold;
-            font-size: 16px;
+            font-size: 1rem;
         }
 
         /* Final CTA */
         .final-cta {
-            padding: 100px 0;
-            background: var(--gradient-primary);
-            color: var(--white);
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
             text-align: center;
         }
 
         .final-cta h2 {
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
 
         .final-cta p {
-            font-size: 20px;
-            margin-bottom: 32px;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
             opacity: 0.9;
         }
 
         .final-cta .cta-button {
-            background: var(--white);
+            background: white;
             color: var(--primary-color);
-            font-size: 18px;
-            padding: 16px 32px;
+            font-size: 1.125rem;
+            padding: 1rem 2rem;
         }
 
         /* Responsive Design */
@@ -539,17 +587,17 @@
 
             .hero-content {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 2.5rem;
                 text-align: center;
             }
 
             .hero-text h1 {
-                font-size: 40px;
+                font-size: 2.5rem;
             }
 
             .problem-content {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 2.5rem;
             }
 
             .features h2,
@@ -558,7 +606,7 @@
             .how-it-works h2,
             .pricing h2,
             .final-cta h2 {
-                font-size: 36px;
+                font-size: 2.25rem;
             }
 
             .features-grid,
@@ -570,15 +618,19 @@
             .steps {
                 grid-template-columns: 1fr;
             }
+
+            .container {
+                padding: 0 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="container">
-            <div class="logo">
+            <a href="#" class="logo">
                 🧠 novobeing
-            </div>
+            </a>
             <ul class="nav-links">
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#clinical-data">Clinical Data</a></li>
@@ -693,8 +745,8 @@
                         </div>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <p style="font-size: 18px; color: var(--text-primary); font-weight: 600;">And the best part? It only takes 5 minutes to set up and start using.</p>
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <p style="font-size: 1.125rem; color: var(--text-primary); font-weight: 600;">And the best part? It only takes 5 minutes to set up and start using.</p>
                 </div>
             </div>
         </section>
@@ -762,7 +814,7 @@
                     </div>
                     <div class="pricing-card">
                         <h3>Monthly Subscription</h3>
-                        <div class="price">$150<span style="font-size: 20px;">/month</span></div>
+                        <div class="price">$150<span style="font-size: 1.25rem;">/month</span></div>
                         <div class="price-description">Monthly software subscription</div>
                         <ul class="features-list">
                             <li>Novobeing Software Suite</li>
@@ -772,9 +824,9 @@
                         </ul>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <p style="font-size: 18px; color: var(--text-primary); font-weight: 600;">100% Satisfaction Guaranteed</p>
-                    <p style="color: var(--text-secondary); margin-top: 8px;">Experience Novobeing risk-free with our 30-day money-back guarantee. If you're not completely satisfied, simply cancel within the first 30 days for a full refund—no questions asked.</p>
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <p style="font-size: 1.125rem; color: var(--text-primary); font-weight: 600;">100% Satisfaction Guaranteed</p>
+                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">Experience Novobeing risk-free with our 30-day money-back guarantee. If you're not completely satisfied, simply cancel within the first 30 days for a full refund—no questions asked.</p>
                 </div>
             </div>
         </section>
