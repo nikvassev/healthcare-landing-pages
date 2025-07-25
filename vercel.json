@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/",
+      "source": "/(.*)",
       "destination": "/mental-health/index.html",
       "has": [
         {
@@ -11,7 +11,7 @@
       ]
     },
     {
-      "source": "/",
+      "source": "/(.*)",
       "destination": "/addiction/index.html",
       "has": [
         {
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "source": "/",
+      "source": "/(.*)",
       "destination": "/iv-therapy/index.html",
       "has": [
         {
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "source": "/",
+      "source": "/(.*)",
       "destination": "/senior-living/index.html",
       "has": [
         {
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "source": "/",
+      "source": "/(.*)",
       "destination": "/palliative-care/index.html",
       "has": [
         {
