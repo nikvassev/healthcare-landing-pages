@@ -3018,7 +3018,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 									</span>
 								</div>
 							</div>
-							<a href="https://manus.im/app?utm_source=manusspace" target="_blank" class="footer-button" id="footer-btn-pc">
 								<span class="footer-logo">
 									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
 										<path
@@ -3058,7 +3057,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 										/>
 									</svg>
 								</span>
-								<div class="title">Made with Manus</div>
 								<div class="create-title">Create my website</div>
 							</a>
 						</div>
@@ -3102,13 +3100,11 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 										fill="white"
 									/>
 								</svg>
-								<div class="title">Made with Manus</div>
 								<div class="create-title">Create my website</div>
 							</div>
 							<div class="footer-dialog">
 								<div class="dialog-box">
 									<div class="dialog-header">
-										<div class="dialog-header-title">Made with Manus</div>
 										<span class="dialog-header-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
 												<path
@@ -3430,8 +3426,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 							position: fixed
 						}
 					}
-					`,e.appendChild(l),e.appendChild(n),this.setupEventListeners(e)}connectedCallback(){Ct({eventName:"manus_watermark_show"})}onclickEvent(e,n,l){const i=e.querySelector(n);i instanceof HTMLElement&&(i.onclick=o=>{l(o,i)})}setupEventListeners(e){const n=r=>{const c=e.querySelector(".footer-dialog");c instanceof HTMLElement&&(c.style.display=r)},l=()=>{window.open("https://manus.im/app?utm_source=manusspace","_blank"),n("none")};this.onclickEvent(e,".page-footer-mobile .dialog-footer-button-left",()=>{n("none")}),this.onclickEvent(e,".page-footer-mobile .dialog-footer-button-right",()=>{l()}),this.onclickEvent(e,".page-footer-mobile .dialog-header-icon",()=>{n("none")}),this.onclickEvent(e,".page-footer-mobile .footer-button",()=>{n("flex"),Ct({eventName:"manus_watermark_click"})}),this.onclickEvent(e,"#footer-btn-pc",()=>{Ct({eventName:"manus_watermark_click"})}),this.onclickEvent(e,".footer-close-btn",()=>{localStorage.setItem("embedClosed","true");const r=e.querySelector(".page-footer");r instanceof HTMLElement&&(r.style.display="none");const c=e.querySelector(".page-footer-mobile");c instanceof HTMLElement&&(c.style.display="none"),Ct({eventName:"manus_watermark_close"})}),this.onclickEvent(e,".page-footer-mobile .footer-dialog",(r,c)=>{r.target===c&&n("none")});const i=e.querySelector(".tooltip-icon"),o=e.querySelector(".tooltip-dialog");if(i.addEventListener("mouseenter",function(){o.style.display="block"}),i.addEventListener("mouseleave",function(){o.style.display="none"}),localStorage.getItem("embedClosed")){const r=e.querySelector(".page-footer");r instanceof HTMLElement&&(r.style.display="none");const c=e.querySelector(".page-footer-mobile");c instanceof HTMLElement&&(c.style.display="none")}}}function ie(t){return`made-with-${t}`}class jm extends HTMLElement{constructor(){super(),this.isMobile=!1,this.isMobile=Hd(),Wt(this.template,this)}get template(){const e=()=>this.isMobile?M`<button class=${ie("btn")} @click=${()=>{var n;return(n=this.dialogRef)==null?void 0:n.show()}}>${gr} Made with Manus</button>
-					<lit-dialog ${vt(n=>this.handleSetDialogRef(n))} title="Made with Manus">
 						<p>This user-generated website was created with AI. Use with caution.</p>
 						<p>
 							Not an official Manus website nor endorsed by Manus. Content may contain inaccuracies; double-check before use. Do not submit
@@ -3439,7 +3433,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 						</p>
 						<div slot="footer" class=${ie("dialog-footer")}>
 							<button class=${ie("dialog-button")} @click=${()=>{var n;return(n=this.dialogRef)==null?void 0:n.close()}}>Cancel</button>
-							<a href="https://manus.im/app?utm_source=manusspace" target="_blank" @click=${()=>{var n;return(n=this.dialogRef)==null?void 0:n.close()}}>
 								<button
 									class=${rt({[ie("dialog-button")]:!0,[ie("dialog-button-primary")]:!0})}
 								>
@@ -3447,10 +3440,8 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 								</button>
 							</a>
 						</div>
-					</lit-dialog>`:M`<a href="https://manus.im/app?utm_source=manusspace" target="_blank" class=${ie("btn-link")}>
 				<button class=${ie("btn")}>
 					${gr}
-					<span class=${ie("btn-text")}>Made with Manus</span>
 					<span class=${ie("btn-text-hover")}>Create my website</span>
 					<span
 						class="tooltip-trigger-css tooltip-trigger-right-css"
@@ -3555,7 +3546,6 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
 
 			</script><script
 			defer
-			data-domain="manus.space"
 			src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
 		></script>
 		<script>
@@ -5514,7 +5504,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 									</span>
 								</div>
 							</div>
-							<a href="https://manus.im/app?utm_source=manusspace" target="_blank" class="footer-button" id="footer-btn-pc">
 								<span class="footer-logo">
 									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
 										<path
@@ -5554,7 +5543,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 										/>
 									</svg>
 								</span>
-								<div class="title">Made with Manus</div>
 								<div class="create-title">Create my website</div>
 							</a>
 						</div>
@@ -5598,13 +5586,11 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 										fill="white"
 									/>
 								</svg>
-								<div class="title">Made with Manus</div>
 								<div class="create-title">Create my website</div>
 							</div>
 							<div class="footer-dialog">
 								<div class="dialog-box">
 									<div class="dialog-header">
-										<div class="dialog-header-title">Made with Manus</div>
 										<span class="dialog-header-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
 												<path
@@ -5926,8 +5912,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 							position: fixed
 						}
 					}
-					`,e.appendChild(l),e.appendChild(n),this.setupEventListeners(e)}connectedCallback(){Ct({eventName:"manus_watermark_show"})}onclickEvent(e,n,l){const i=e.querySelector(n);i instanceof HTMLElement&&(i.onclick=o=>{l(o,i)})}setupEventListeners(e){const n=r=>{const c=e.querySelector(".footer-dialog");c instanceof HTMLElement&&(c.style.display=r)},l=()=>{window.open("https://manus.im/app?utm_source=manusspace","_blank"),n("none")};this.onclickEvent(e,".page-footer-mobile .dialog-footer-button-left",()=>{n("none")}),this.onclickEvent(e,".page-footer-mobile .dialog-footer-button-right",()=>{l()}),this.onclickEvent(e,".page-footer-mobile .dialog-header-icon",()=>{n("none")}),this.onclickEvent(e,".page-footer-mobile .footer-button",()=>{n("flex"),Ct({eventName:"manus_watermark_click"})}),this.onclickEvent(e,"#footer-btn-pc",()=>{Ct({eventName:"manus_watermark_click"})}),this.onclickEvent(e,".footer-close-btn",()=>{localStorage.setItem("embedClosed","true");const r=e.querySelector(".page-footer");r instanceof HTMLElement&&(r.style.display="none");const c=e.querySelector(".page-footer-mobile");c instanceof HTMLElement&&(c.style.display="none"),Ct({eventName:"manus_watermark_close"})}),this.onclickEvent(e,".page-footer-mobile .footer-dialog",(r,c)=>{r.target===c&&n("none")});const i=e.querySelector(".tooltip-icon"),o=e.querySelector(".tooltip-dialog");if(i.addEventListener("mouseenter",function(){o.style.display="block"}),i.addEventListener("mouseleave",function(){o.style.display="none"}),localStorage.getItem("embedClosed")){const r=e.querySelector(".page-footer");r instanceof HTMLElement&&(r.style.display="none");const c=e.querySelector(".page-footer-mobile");c instanceof HTMLElement&&(c.style.display="none")}}}function ie(t){return`made-with-${t}`}class jm extends HTMLElement{constructor(){super(),this.isMobile=!1,this.isMobile=Hd(),Wt(this.template,this)}get template(){const e=()=>this.isMobile?M`<button class=${ie("btn")} @click=${()=>{var n;return(n=this.dialogRef)==null?void 0:n.show()}}>${gr} Made with Manus</button>
-					<lit-dialog ${vt(n=>this.handleSetDialogRef(n))} title="Made with Manus">
 						<p>This user-generated website was created with AI. Use with caution.</p>
 						<p>
 							Not an official Manus website nor endorsed by Manus. Content may contain inaccuracies; double-check before use. Do not submit
@@ -5935,7 +5919,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 						</p>
 						<div slot="footer" class=${ie("dialog-footer")}>
 							<button class=${ie("dialog-button")} @click=${()=>{var n;return(n=this.dialogRef)==null?void 0:n.close()}}>Cancel</button>
-							<a href="https://manus.im/app?utm_source=manusspace" target="_blank" @click=${()=>{var n;return(n=this.dialogRef)==null?void 0:n.close()}}>
 								<button
 									class=${rt({[ie("dialog-button")]:!0,[ie("dialog-button-primary")]:!0})}
 								>
@@ -5943,10 +5926,8 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 								</button>
 							</a>
 						</div>
-					</lit-dialog>`:M`<a href="https://manus.im/app?utm_source=manusspace" target="_blank" class=${ie("btn-link")}>
 				<button class=${ie("btn")}>
 					${gr}
-					<span class=${ie("btn-text")}>Made with Manus</span>
 					<span class=${ie("btn-text-hover")}>Create my website</span>
 					<span
 						class="tooltip-trigger-css tooltip-trigger-right-css"
@@ -6051,7 +6032,6 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
 
 			</script><script
 			defer
-			data-domain="manus.space"
 			src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
 		></script>
 		<script>
@@ -7401,7 +7381,6 @@ Visit https://www.docs.developers.amplitude.com/data/sdks/browser-2/#tracking-de
 					opacity: 0.85;
 				}
 			</style>
-			${e()}`}handleToggleEditMode(){we.viewType==="default"?(we.setViewType("edit"),this.se.toggleEditMode(),qn.showToast({title:"You're now editing - all changes auto-save",variant:"success"}),Wt({eventName:"edit_click",extData:{type:"space"}})):(we.setViewType("default"),this.se.toggleToPreviewMode(),qn.showToast({title:"Switched to preview mode",variant:"success"}))}}function T(t){return`footer-toolbar-${t}`}class L2 extends pn{constructor(e){super(e,!1),this.container=e,this.hasPrivilege=!1,this.isRestoring=!1,this.isShowHistoryBtn=!1,this.isFolded=!1,this.isFolded=localStorage.getItem(uo.embedClosed)==="true",this.init()}get template(){const e=()=>{const n=M`<div class=${T("fold-btn")} @click=${this.toggleFolded.bind(this)}>${Hb}</div>`;if(!this.hasPrivilege)return M`<footer-watermark></footer-watermark>`;const l=we.viewType!=="history"?M`<button
 							class=${He({[T("icon-button")]:!0,"tooltip-trigger-css":!0,[T("icon-button-disabled")]:!this.isShowHistoryBtn})}
 							data-tooltip="Original version"
 							@click=${()=>this.handleViewOriginVersion()}
@@ -8056,7 +8035,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 					}
 				</style>
 
-				<lit-dialog ${Gt(e=>this.handleSetDialogRef(e))} title="Made with Manus" width="358px">
 					<p class=${K("dialog-content")}>
 						AI-generated (possibly user-edited) content - please verify carefully and submit no personal information.
 					</p>
@@ -8081,7 +8059,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 					class=${He({[K("root")]:!0})}
 					@click=${()=>{var e;(e=this.dialogRef)==null||e.show(),Wt({eventName:"manus_watermark_click"})}}
 				>
-					${ol} Made with Manus
 				</div>`:M`<style>
 				.${K("root")} {
 					z-index: 10000;
@@ -8197,7 +8174,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 				@click=${()=>this.handleClick()}
 			>
 				${ol}
-				<span>Made with Manus</span>
 				<span class=${K("hover-text")}>Create my website</span>
 				<span class=${K("hover-icon")} @click=${e=>this.handleClose(e)}>${jb}</span>
 
@@ -8213,8 +8189,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 						>.
 					</p>
 				</div>
-			</div>`}connectedCallback(){Wt({eventName:"manus_watermark_show"})}handleClick(){Wt({eventName:"manus_watermark_click"}),window.open(`${fe.host}/app?utm_source=manusspace`,"_blank")}handleClose(e){e.stopPropagation(),localStorage.setItem("embedClosed","true"),this.isClosed=!0,this.render(),Wt({eventName:"manus_watermark_close"})}handleSetDialogRef(e){e instanceof Vl&&(this.dialogRef=e)}render(){pt(this.template,this.shadowRoot)}}function oe(t){return`made-with-${t}`}class P2 extends HTMLElement{constructor(){super(),this.isMobile=!1,this.isMobile=Zc(),pt(this.template,this)}get template(){const e=()=>this.isMobile?M`<button class=${oe("btn")} @click=${()=>{var n;return(n=this.dialogRef)==null?void 0:n.show()}}>${ol} Made with Manus</button>
-					<lit-dialog ${Gt(n=>this.handleSetDialogRef(n))} title="Made with Manus">
 						<p>AI-generated (possibly user-edited) content - please verify carefully and submit no personal information.</p>
 						<p>
 							If you believe this content violates your rights or applicable laws,
@@ -8224,7 +8198,6 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 						</p>
 						<div slot="footer" class=${oe("dialog-footer")}>
 							<button class=${oe("dialog-button")} @click=${()=>{var n;return(n=this.dialogRef)==null?void 0:n.close()}}>Cancel</button>
-							<a href="${fe.host}/app?utm_source=manusspace" target="_blank" @click=${()=>{var n;return(n=this.dialogRef)==null?void 0:n.close()}}>
 								<button
 									class=${He({[oe("dialog-button")]:!0,[oe("dialog-button-primary")]:!0})}
 								>
@@ -8232,10 +8205,8 @@ font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, He
 								</button>
 							</a>
 						</div>
-					</lit-dialog>`:M`<a href="${fe.host}/app?utm_source=manusspace" target="_blank" class=${oe("btn-link")}>
 				<button class=${oe("btn")}>
 					${ol}
-					<span class=${oe("btn-text")}>Made with Manus</span>
 					<span class=${oe("btn-text-hover")}>Create my website</span>
 					<span
 						class="tooltip-trigger-css tooltip-trigger-right-css"
@@ -8340,7 +8311,6 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
 
 			</script><script
 			defer
-			data-domain="manus.space"
 			src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
 		></script>
 		<script>
