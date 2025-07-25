@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novobeing Healthcare Landing Pages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #6366F1 0%, #4338CA 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #1F2937;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+        
+        .landing-pages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .page-card {
+            background: #F9FAFB;
+            border-radius: 12px;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: #6366F1;
+        }
+        
+        .page-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #6366F1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-description {
+            color: #6B7280;
+            font-size: 1rem;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #9CA3AF;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .landing-pages {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Novobeing Healthcare Solutions</h1>
+        <p class="subtitle">VR Therapy Landing Pages Collection</p>
+        
+        <div class="landing-pages">
+            <a href="/mental-health/" class="page-card">
+                <div class="page-title">Mental Health</div>
+                <div class="page-description">VR therapy solutions for mental health practices and wellness centers</div>
+            </a>
+            
+            <a href="/addiction/" class="page-card">
+                <div class="page-title">Addiction Treatment</div>
+                <div class="page-description">VR interventions for addiction treatment centers and recovery programs</div>
+            </a>
+            
+            <a href="/iv-therapy/" class="page-card">
+                <div class="page-title">IV Therapy</div>
+                <div class="page-description">VR comfort experiences for IV therapy clinics and medical procedures</div>
+            </a>
+            
+            <a href="/senior-living/" class="page-card">
+                <div class="page-title">Senior Living</div>
+                <div class="page-description">VR wellness programs for senior living communities and care facilities</div>
+            </a>
+            
+            <a href="/palliative-care/" class="page-card">
+                <div class="page-title">Palliative Care</div>
+                <div class="page-description">VR comfort solutions for end-of-life care and hospice services</div>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>Powered by Novobeing VR Therapy Solutions</p>
+        </div>
+    </div>
+</body>
+</html>
+
