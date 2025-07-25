@@ -7,15 +7,16 @@
     <meta name="description" content="Help patients overcome withdrawal symptoms and cravings with evidence-based virtual reality interventions that reduce relapse rates">
     <style>
         :root {
-            --primary-blue: #4A90E2;
-            --primary-purple: #7B68EE;
-            --text-dark: #2C3E50;
-            --text-light: #7F8C8D;
-            --background-light: #F8F9FA;
-            --white: #FFFFFF;
-            --border-light: #E9ECEF;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+            --primary-color: #4285f4;
+            --secondary-color: #34a853;
+            --accent-color: #fbbc04;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --background-light: #f8f9fa;
+            --border-light: #dadce0;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --gradient-primary: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
         }
 
         * {
@@ -25,16 +26,16 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
+            color: var(--text-primary);
+            background: var(--white);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         /* Header */
@@ -52,394 +53,284 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 16px 0;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-color);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 32px;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-primary);
             font-weight: 500;
-            transition: color 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--primary-blue);
+            background: var(--background-light);
+            color: var(--primary-color);
         }
 
         .cta-button {
-            background: var(--gradient);
+            background: var(--gradient-primary);
             color: var(--white);
-            padding: 0.75rem 1.5rem;
+            padding: 12px 24px;
             border: none;
-            border-radius: 8px;
+            border-radius: 24px;
             font-weight: 600;
             text-decoration: none;
-            transition: transform 0.3s ease;
-            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         /* Hero Section */
         .hero {
-            background: var(--background-light);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
             padding: 120px 0 80px;
-            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 56px;
             font-weight: 700;
-            margin-bottom: 1rem;
-            background: var(--gradient);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .hero-text p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.6;
         }
 
         .hero-image {
-            max-width: 100%;
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .hero-image img {
+            width: 100%;
             height: auto;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            margin-top: 2rem;
+            display: block;
         }
 
         /* Problem Section */
         .problem {
-            padding: 80px 0;
+            padding: 100px 0;
             background: var(--white);
         }
 
         .problem-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 80px;
             align-items: center;
         }
 
         .problem h2 {
-            font-size: 2.5rem;
+            font-size: 48px;
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-primary);
         }
 
         .problem p {
-            font-size: 1.125rem;
-            color: var(--text-light);
-            line-height: 1.8;
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
 
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background: var(--background-light);
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 2rem;
+        .problem-image {
             border-radius: 16px;
+            overflow: hidden;
             box-shadow: var(--shadow);
-            text-align: center;
-            transition: transform 0.3s ease;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .feature-card p {
-            color: var(--text-light);
-            line-height: 1.6;
+        .problem-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Benefits Section */
         .benefits {
-            padding: 80px 0;
-            background: var(--white);
+            padding: 100px 0;
+            background: var(--background-light);
         }
 
         .benefits h2 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 48px;
             font-weight: 700;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
+            margin-bottom: 80px;
+            color: var(--text-primary);
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 32px;
         }
 
         .benefit-item {
             display: flex;
             align-items: flex-start;
-            gap: 1rem;
-            padding: 1.5rem;
-            background: var(--background-light);
-            border-radius: 12px;
+            gap: 20px;
+            padding: 32px;
+            background: var(--white);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         .benefit-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
-            font-weight: bold;
+            font-size: 24px;
             flex-shrink: 0;
         }
 
         .benefit-content h3 {
-            font-size: 1.25rem;
+            font-size: 20px;
             font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
+            margin-bottom: 8px;
+            color: var(--text-primary);
         }
 
         .benefit-content p {
-            color: var(--text-light);
+            color: var(--text-secondary);
             line-height: 1.6;
         }
 
         /* Testimonials */
         .testimonials {
-            padding: 80px 0;
-            background: var(--background-light);
+            padding: 100px 0;
+            background: var(--white);
         }
 
         .testimonials h2 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 48px;
             font-weight: 700;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
+            margin-bottom: 80px;
+            color: var(--text-primary);
         }
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
         }
 
         .testimonial {
-            background: var(--white);
-            padding: 2rem;
+            background: var(--background-light);
+            padding: 40px;
             border-radius: 16px;
-            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 40px;
+            font-size: 80px;
+            color: var(--primary-color);
+            opacity: 0.3;
         }
 
         .testimonial blockquote {
-            font-size: 1.125rem;
-            line-height: 1.7;
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-primary);
+            margin-bottom: 24px;
             font-style: italic;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: var(--primary-blue);
+            color: var(--primary-color);
+            margin-bottom: 4px;
         }
 
         .testimonial-title {
-            color: var(--text-light);
-            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-size: 14px;
         }
 
-        /* How It Works */
-        .how-it-works {
-            padding: 80px 0;
-            background: var(--white);
-        }
-
-        .how-it-works h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .step {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 1.5rem;
-        }
-
-        .step h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .step p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* Pricing */
-        .pricing {
-            padding: 80px 0;
-            background: var(--background-light);
-        }
-
-        .pricing h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: var(--text-dark);
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .pricing-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .price {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .price-description {
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
-
-        .features-list {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .features-list li {
-            padding: 0.5rem 0;
-            color: var(--text-dark);
-        }
-
-        .features-list li:before {
-            content: "✓";
-            color: var(--primary-blue);
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-
-        /* CTA Section */
+        /* Final CTA */
         .final-cta {
-            padding: 80px 0;
-            background: var(--gradient);
+            padding: 100px 0;
+            background: var(--gradient-primary);
             color: var(--white);
             text-align: center;
         }
 
         .final-cta h2 {
-            font-size: 2.5rem;
+            font-size: 48px;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 16px;
         }
 
         .final-cta p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
+            font-size: 20px;
+            margin-bottom: 32px;
             opacity: 0.9;
         }
 
         .final-cta .cta-button {
             background: var(--white);
-            color: var(--primary-blue);
-            font-size: 1.125rem;
-            padding: 1rem 2rem;
+            color: var(--primary-color);
+            font-size: 18px;
+            padding: 16px 32px;
         }
 
         /* Responsive Design */
@@ -448,22 +339,29 @@
                 display: none;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
             }
 
             .problem-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 40px;
             }
 
-            .features-grid,
+            .benefits h2,
+            .testimonials h2,
+            .final-cta h2 {
+                font-size: 36px;
+            }
+
             .benefits-grid,
             .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .steps {
                 grid-template-columns: 1fr;
             }
         }
@@ -472,7 +370,9 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">🧠 novobeing</div>
+            <div class="logo">
+                🧠 novobeing
+            </div>
             <ul class="nav-links">
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#clinical-data">Clinical Data</a></li>
@@ -488,10 +388,16 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Transform Your Treatment Center with Immersive VR Therapy</h1>
-                <p>Help patients overcome withdrawal symptoms and cravings with evidence-based virtual reality interventions that reduce relapse rates</p>
-                <a href="#get-started" class="cta-button">Yes, I Want This! →</a>
-                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Person using VR headset in nature setting" class="hero-image">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Transform Your Treatment Center with Immersive VR Therapy</h1>
+                        <p>Help patients overcome withdrawal symptoms and cravings with evidence-based virtual reality interventions that reduce relapse rates</p>
+                        <a href="#get-started" class="cta-button">Yes, I Want This! →</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Person using VR headset in nature setting">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -502,28 +408,8 @@
                         <h2>When acute withdrawal meets overwhelming cravings...</h2>
                         <p>Managing patients through severe withdrawal symptoms while battling intense cravings creates an overwhelming challenge for treatment centers. Traditional methods often fall short when patients need immediate relief. Novobeing provides evidence-based VR interventions that interrupt cravings instantly and help patients develop real-time coping mechanisms for lasting recovery.</p>
                     </div>
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Treatment center environment" style="width: 100%; border-radius: 12px;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features" id="whats-included">
-            <div class="container">
-                <h2>See How Novobeing Transforms Addiction Treatment with Immersive VR Therapy</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Therapeutic Experiences</h3>
-                        <p>Evidence-based modules designed to reset the nervous system and enhance mood.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Nature Escapes</h3>
-                        <p>Serene photorealistic landscapes to reduce anxiety and promote relaxation.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Interactive Breathing</h3>
-                        <p>Interactive breathwork and meditation sessions to induce calm and regulate stress quickly.</p>
+                    <div class="problem-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Treatment center environment">
                     </div>
                 </div>
             </div>
@@ -576,8 +462,8 @@
                         </div>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 2rem;">
-                    <p style="font-size: 1.125rem; color: var(--text-dark); font-weight: 600;">And the best part? It only takes 5 minutes to set up and start using.</p>
+                <div style="text-align: center; margin-top: 40px;">
+                    <p style="font-size: 18px; color: var(--text-primary); font-weight: 600;">And the best part? It only takes 5 minutes to set up and start using.</p>
                 </div>
             </div>
         </section>
@@ -605,63 +491,6 @@
             </div>
         </section>
 
-        <section class="how-it-works">
-            <div class="container">
-                <h2>How It Works</h2>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Order Your Headsets</h3>
-                        <p>Order a Novobeing Kit that includes all software, hardware and accessories you need to offer Therapeutic VR.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Set Up Your System</h3>
-                        <p>Connect the headset to Wi-Fi, complete the onboarding steps, and install the optional wall mount if desired. No IT support required.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Invite Clients to Use It</h3>
-                        <p>Deploy the headset in a designated area and offer to your clients.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="pricing" id="pricing">
-            <div class="container">
-                <h2>Special Limited-Time Offer</h2>
-                <div class="pricing-cards">
-                    <div class="pricing-card">
-                        <h3>One-Time Cost</h3>
-                        <div class="price">$699</div>
-                        <div class="price-description">Device, accessories & shipping</div>
-                        <ul class="features-list">
-                            <li>Meta Quest 3 Headset</li>
-                            <li>Full Accessories Kit</li>
-                            <li>Wall Mount</li>
-                            <li>Shipping</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>Monthly Subscription</h3>
-                        <div class="price">$150<span style="font-size: 1rem;">/month</span></div>
-                        <div class="price-description">Monthly software subscription</div>
-                        <ul class="features-list">
-                            <li>Novobeing Software Suite</li>
-                            <li>50+ Therapeutic Experiences</li>
-                            <li>Premium Support</li>
-                            <li>Regular Content Updates</li>
-                        </ul>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 2rem;">
-                    <p style="font-size: 1.125rem; color: var(--text-dark); font-weight: 600;">100% Satisfaction Guaranteed</p>
-                    <p style="color: var(--text-light); margin-top: 0.5rem;">Experience Novobeing risk-free with our 30-day money-back guarantee. If you're not completely satisfied, simply cancel within the first 30 days for a full refund—no questions asked.</p>
-                </div>
-            </div>
-        </section>
-
         <section class="final-cta" id="get-started">
             <div class="container">
                 <h2>Ready to transform your treatment center?</h2>
@@ -672,4 +501,3 @@
     </main>
 </body>
 </html>
-
