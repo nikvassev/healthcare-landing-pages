@@ -4,215 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform Your Senior Living Community with Immersive VR Wellness | Novobeing</title>
+    <meta name="description" content="Combat social isolation and enhance resident wellbeing with evidence-based virtual reality experiences">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-blue: #4A90E2;
+            --primary-purple: #7B68EE;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --background-light: #F8F9FA;
+            --white: #FFFFFF;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --gradient: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
         }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-dark);
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: #4F46E5;
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: var(--white); box-shadow: var(--shadow); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); }
         .cta-button {
-            background: white;
-            color: #4F46E5;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.3s;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-        
-        main {
-            margin-top: 80px;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .hero-cta {
-            background: #10B981;
-            color: white;
-            padding: 1rem 2rem;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
             border-radius: 8px;
+            font-weight: 600;
             text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s;
+            transition: transform 0.3s ease;
         }
-        
-        .hero-cta:hover {
-            background: #059669;
-            transform: translateY(-2px);
-        }
-        
-        .section {
-            padding: 4rem 0;
-        }
-        
-        .section h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #1F2937;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .feature {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
-        .feature h3 {
-            font-size: 1.5rem;
+        .cta-button:hover { transform: translateY(-2px); }
+        .hero { background: var(--background-light); padding: 120px 0 80px; text-align: center; }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            color: #7C3AED;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        
-        .testimonials {
-            background: #F9FAFB;
-        }
-        
-        .testimonial {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .testimonial blockquote {
-            font-style: italic;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        .testimonial cite {
-            font-weight: 600;
-            color: #7C3AED;
-        }
-        
-        .pricing {
-            background: #1F2937;
-            color: white;
-            text-align: center;
-        }
-        
-        .pricing h2 {
-            color: white;
-        }
-        
-        .price-card {
-            background: white;
-            color: #1F2937;
-            padding: 2rem;
-            border-radius: 10px;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        
-        .price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #7C3AED;
-            margin-bottom: 1rem;
-        }
-        
-        .price-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        
-        .price-features li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #E5E7EB;
-        }
-        
+        .hero p { font-size: 1.25rem; color: var(--text-light); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero-image { max-width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow); margin-top: 2rem; }
+        .section { padding: 80px 0; }
+        .section:nth-child(even) { background: var(--background-light); }
+        .section h2 { text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 3rem; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .benefit-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: var(--white); border-radius: 12px; box-shadow: var(--shadow); }
+        .benefit-icon { width: 48px; height: 48px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: bold; flex-shrink: 0; }
+        .benefit-content h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .benefit-content p { color: var(--text-light); line-height: 1.6; }
+        .final-cta { padding: 80px 0; background: var(--gradient); color: var(--white); text-align: center; }
+        .final-cta h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .final-cta p { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; }
+        .final-cta .cta-button { background: var(--white); color: var(--primary-blue); font-size: 1.125rem; padding: 1rem 2rem; }
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
+            .hero h1 { font-size: 2.5rem; }
+            .benefits-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -220,117 +70,74 @@
     <header>
         <nav class="container">
             <div class="logo">🧠 novobeing</div>
-            <ul class="nav-links">
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#clinical-data">Clinical Data</a></li>
-                <li><a href="#included">What's Included</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-            </ul>
-            <a href="#get-started" class="cta-button">Get Started</a>
+            <a href="#get-started" class="cta-button">Yes, I Want This! →</a>
         </nav>
     </header>
-
     <main>
         <section class="hero">
             <div class="container">
                 <h1>Transform Your Senior Living Community with Immersive VR Wellness</h1>
                 <p>Combat social isolation and enhance resident wellbeing with evidence-based virtual reality experiences that bring joy, connection, and mental stimulation to daily life</p>
-                <a href="#get-started" class="hero-cta">Yes, I Want This! →</a>
+                <a href="#get-started" class="cta-button">Yes, I Want This! →</a>
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Senior using VR headset" class="hero-image">
             </div>
         </section>
-
-        <section class="section" id="benefits">
+        <section class="section">
             <div class="container">
-                <h2>A New Way</h2>
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">A first-of-its-kind immersive well-being solution designed to help patients feel calmer, more connected, and in control of their healing journey</p>
-                
-                <div class="features">
-                    <div class="feature">
-                        <h3>Therapeutic Experiences</h3>
-                        <p>Evidence-based modules designed to reset the nervous system and enhance mood.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Nature Escapes</h3>
-                        <p>Serene photorealistic landscapes to reduce anxiety and promote relaxation.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Interactive Breathing</h3>
-                        <p>Interactive breathwork and meditation sessions to induce calm and regulate stress quickly.</p>
-                    </div>
-                </div>
-
                 <h2>What you will get:</h2>
-                <div class="features">
-                    <div class="feature">
-                        <h3>Virtual Travel & Memory Connection</h3>
-                        <p>Help residents reconnect with meaningful places and memories through immersive travel experiences that spark joy and conversation.</p>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌍</div>
+                        <div class="benefit-content">
+                            <h3>Virtual Travel & Memory Connection</h3>
+                            <p>Help residents reconnect with meaningful places and memories through immersive travel experiences that spark joy and conversation.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Group Social Bonding Sessions</h3>
-                        <p>Create shared VR experiences that bring residents together, fostering new friendships and reducing social isolation.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">👥</div>
+                        <div class="benefit-content">
+                            <h3>Group Social Bonding Sessions</h3>
+                            <p>Create shared VR experiences that bring residents together, fostering new friendships and reducing social isolation.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Non-Pharmaceutical Wellness</h3>
-                        <p>Reduce reliance on anxiety and sleep medications with natural, immersive relaxation experiences that have no side effects.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌿</div>
+                        <div class="benefit-content">
+                            <h3>Non-Pharmaceutical Wellness</h3>
+                            <p>Reduce reliance on anxiety and sleep medications with natural, immersive relaxation experiences that have no side effects.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Measurable Wellness Improvements</h3>
-                        <p>Track and demonstrate resident wellbeing improvements to families, staff, and administrators with clear, quantifiable results.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📊</div>
+                        <div class="benefit-content">
+                            <h3>Measurable Wellness Improvements</h3>
+                            <p>Track and demonstrate resident wellbeing improvements to families, staff, and administrators with clear, quantifiable results.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Enhanced Staff Efficiency</h3>
-                        <p>Enable care staff to facilitate multiple residents simultaneously, maximizing your team's impact while providing personalized attention.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <div class="benefit-content">
+                            <h3>Enhanced Staff Efficiency</h3>
+                            <p>Enable care staff to facilitate multiple residents simultaneously, maximizing your team's impact while providing personalized attention.</p>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <h3>Cognitive Stimulation & Engagement</h3>
-                        <p>Provide mental stimulation that helps maintain cognitive function and slows dementia progression through interactive, engaging content.</p>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🧠</div>
+                        <div class="benefit-content">
+                            <h3>Cognitive Stimulation & Engagement</h3>
+                            <p>Provide mental stimulation that helps maintain cognitive function and slows dementia progression through interactive, engaging content.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="section testimonials" id="testimonials">
+        <section class="final-cta" id="get-started">
             <div class="container">
-                <h2>Trusted by leading senior living professionals</h2>
-                
-                <div class="testimonial">
-                    <blockquote>"Since introducing Novobeing to our memory care unit, we've seen a 60% reduction in anxiety-related incidents among our residents. The virtual travel experiences have become the highlight of their week, and families are amazed by how engaged their loved ones have become."</blockquote>
-                    <cite>Sarah Chen, RN - Director of Wellness, Sunset Manor Senior Living</cite>
-                </div>
-
-                <div class="testimonial">
-                    <blockquote>"Novobeing has revolutionized our approach to resident engagement. Our activity coordinators can now facilitate meaningful experiences for larger groups, and we've significantly reduced our reliance on anxiety medications. The residents actually ask when their next VR session is scheduled."</blockquote>
-                    <cite>Michael Rodriguez - Executive Director, Golden Years Community</cite>
-                </div>
-
-                <div class="testimonial">
-                    <blockquote>"The transformation in our residents' social interactions has been remarkable. What used to be isolated individuals are now sharing stories about their virtual adventures and forming new friendships. It's given our community a renewed sense of vitality and connection."</blockquote>
-                    <cite>Dr. Patricia Williams, MD - Medical Director, Heritage Hills Senior Care</cite>
-                </div>
-            </div>
-        </section>
-
-        <section class="section pricing" id="pricing">
-            <div class="container">
-                <h2>Special Limited-Time Offer</h2>
-                <div class="price-card">
-                    <div class="price">$699 one-time + $150/month</div>
-                    <ul class="price-features">
-                        <li>Meta Quest 3 Headset</li>
-                        <li>Full Accessories Kit</li>
-                        <li>Wall Mount</li>
-                        <li>Novobeing Software Suite</li>
-                        <li>50+ Therapeutic Experiences</li>
-                        <li>Premium Support</li>
-                        <li>Regular Content Updates</li>
-                        <li>30-day money-back guarantee</li>
-                    </ul>
-                    <a href="#get-started" class="hero-cta" id="get-started">Yes, I Want This Now →</a>
-                </div>
+                <h2>Ready to transform your senior living community?</h2>
+                <p>$699 one-time payment + $150/month</p>
+                <a href="#" class="cta-button">Yes, I Want This Now →</a>
             </div>
         </section>
     </main>
 </body>
 </html>
-

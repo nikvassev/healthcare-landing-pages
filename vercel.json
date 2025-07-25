@@ -1,20 +1,8 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
-      "destination": "/index.html",
-      "permanent": false,
-      "has": [
-        {
-          "type": "host",
-          "value": "mentalhealth.novobeing.co"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/mental-health/$1",
-      "permanent": false,
+      "destination": "/mental-health/index.html",
       "has": [
         {
           "type": "host",
@@ -25,18 +13,6 @@
     {
       "source": "/",
       "destination": "/addiction/index.html",
-      "permanent": false,
-      "has": [
-        {
-          "type": "host",
-          "value": "addiction.novobeing.co"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/addiction/$1",
-      "permanent": false,
       "has": [
         {
           "type": "host",
@@ -47,18 +23,6 @@
     {
       "source": "/",
       "destination": "/iv-therapy/index.html",
-      "permanent": false,
-      "has": [
-        {
-          "type": "host",
-          "value": "ivtherapy.novobeing.co"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/iv-therapy/$1",
-      "permanent": false,
       "has": [
         {
           "type": "host",
@@ -69,18 +33,6 @@
     {
       "source": "/",
       "destination": "/senior-living/index.html",
-      "permanent": false,
-      "has": [
-        {
-          "type": "host",
-          "value": "seniorliving.novobeing.co"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/senior-living/$1",
-      "permanent": false,
       "has": [
         {
           "type": "host",
@@ -91,18 +43,6 @@
     {
       "source": "/",
       "destination": "/palliative-care/index.html",
-      "permanent": false,
-      "has": [
-        {
-          "type": "host",
-          "value": "palliativecare.novobeing.co"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/palliative-care/$1",
-      "permanent": false,
       "has": [
         {
           "type": "host",
