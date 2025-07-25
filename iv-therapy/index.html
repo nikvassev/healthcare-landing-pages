@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your IV Therapy Practice with Immersive VR | Novobeing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #4F46E5;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #4F46E5;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        main {
+            margin-top: 80px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-cta {
+            background: #10B981;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .hero-cta:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1F2937;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #059669;
+        }
+        
+        .testimonials {
+            background: #F9FAFB;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial blockquote {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial cite {
+            font-weight: 600;
+            color: #059669;
+        }
+        
+        .pricing {
+            background: #1F2937;
+            color: white;
+            text-align: center;
+        }
+        
+        .pricing h2 {
+            color: white;
+        }
+        
+        .price-card {
+            background: white;
+            color: #1F2937;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #059669;
+            margin-bottom: 1rem;
+        }
+        
+        .price-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .price-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🧠 novobeing</div>
+            <ul class="nav-links">
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#clinical-data">Clinical Data</a></li>
+                <li><a href="#included">What's Included</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <a href="#get-started" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Transform Your IV Therapy Practice with Immersive VR</h1>
+                <p>Turn uncomfortable medical procedures into premium spa-like wellness experiences that patients love and return for</p>
+                <a href="#get-started" class="hero-cta">Yes, I Want This! →</a>
+            </div>
+        </section>
+
+        <section class="section" id="benefits">
+            <div class="container">
+                <h2>A New Way</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">A first-of-its-kind immersive well-being solution designed to help patients feel calmer, more connected, and in control of their healing journey</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <h3>Therapeutic Experiences</h3>
+                        <p>Evidence-based modules designed to reset the nervous system and enhance mood.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Nature Escapes</h3>
+                        <p>Serene photorealistic landscapes to reduce anxiety and promote relaxation.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Interactive Breathing</h3>
+                        <p>Interactive breathwork and meditation sessions to induce calm and regulate stress quickly.</p>
+                    </div>
+                </div>
+
+                <h2>What you will get:</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Premium Experience Differentiation</h3>
+                        <p>Transform standard IV therapy into a luxury wellness experience that justifies premium pricing and sets you apart from competitors.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Anxiety & Discomfort Elimination</h3>
+                        <p>Immersive VR experiences distract patients from needle insertion and make 30-90 minute sessions feel like minutes, not hours.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Enhanced Treatment Effectiveness</h3>
+                        <p>Stress reduction through VR improves nutrient absorption and treatment outcomes while creating positive associations with your clinic.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Increased Patient Retention</h3>
+                        <p>Patients associate positive feelings with treatments, leading to higher retention rates and increased lifetime value.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Staff Efficiency Optimization</h3>
+                        <p>Nurses can monitor multiple patients efficiently while VR provides consistent comfort and entertainment without constant staff intervention.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Upselling Opportunities</h3>
+                        <p>Introduce meditation and wellness programs that extend customer lifetime value and create premium service packages.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+                <h2>Trusted by leading IV therapy professionals</h2>
+                
+                <div class="testimonial">
+                    <blockquote>"Since integrating Novobeing into our IV therapy clinic, we've seen a remarkable 60% increase in patient satisfaction scores. Patients now describe their treatments as 'spa-like' and 'relaxing' instead of 'clinical' and 'uncomfortable'. Our premium packages are booking out weeks in advance."</blockquote>
+                    <cite>Dr. Sarah Chen - Medical Director, Vitality Wellness Center</cite>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>"Novobeing has completely transformed our patient experience. We've eliminated needle anxiety complaints and our treatment rooms now feel like luxury spa suites. Patients are booking additional sessions and referring friends - our revenue has increased 40% in just three months."</blockquote>
+                    <cite>Dr. Marcus Rodriguez - Owner, Elite IV Therapy & Wellness</cite>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>"As a busy IV therapy clinic with multiple treatment rooms, Novobeing allows our nurses to provide premium care to more patients simultaneously. The VR keeps patients comfortable and entertained while we focus on medical care. It's been a game-changer for our operational efficiency and patient outcomes."</blockquote>
+                    <cite>Jennifer Thompson, RN - Head Nurse, Hydration & Wellness Associates</cite>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pricing" id="pricing">
+            <div class="container">
+                <h2>Special Limited-Time Offer</h2>
+                <div class="price-card">
+                    <div class="price">$699 one-time + $150/month</div>
+                    <ul class="price-features">
+                        <li>Meta Quest 3 Headset</li>
+                        <li>Full Accessories Kit</li>
+                        <li>Wall Mount</li>
+                        <li>Novobeing Software Suite</li>
+                        <li>50+ Therapeutic Experiences</li>
+                        <li>Premium Support</li>
+                        <li>Regular Content Updates</li>
+                        <li>30-day money-back guarantee</li>
+                    </ul>
+                    <a href="#get-started" class="hero-cta" id="get-started">Yes, I Want This Now →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+

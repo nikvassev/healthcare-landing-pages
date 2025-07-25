@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Practice with Immersive VR Therapy | Novobeing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #4F46E5;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #4F46E5;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        main {
+            margin-top: 80px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-cta {
+            background: #10B981;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .hero-cta:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1F2937;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #4F46E5;
+        }
+        
+        .testimonials {
+            background: #F9FAFB;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial blockquote {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial cite {
+            font-weight: 600;
+            color: #4F46E5;
+        }
+        
+        .pricing {
+            background: #1F2937;
+            color: white;
+            text-align: center;
+        }
+        
+        .pricing h2 {
+            color: white;
+        }
+        
+        .price-card {
+            background: white;
+            color: #1F2937;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4F46E5;
+            margin-bottom: 1rem;
+        }
+        
+        .price-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .price-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🧠 novobeing</div>
+            <ul class="nav-links">
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#clinical-data">Clinical Data</a></li>
+                <li><a href="#included">What's Included</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <a href="#get-started" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Transform Your Practice with Immersive VR Therapy</h1>
+                <p>Help clients achieve breakthrough results with evidence-based virtual reality experiences</p>
+                <a href="#get-started" class="hero-cta">Yes, I Want This! →</a>
+            </div>
+        </section>
+
+        <section class="section" id="benefits">
+            <div class="container">
+                <h2>A New Way</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">A first-of-its-kind immersive well-being solution designed to help patients feel calmer, more connected, and in control of their healing journey</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <h3>Therapeutic Experiences</h3>
+                        <p>Evidence-based modules designed to reset the nervous system and enhance mood.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Nature Escapes</h3>
+                        <p>Serene photorealistic landscapes to reduce anxiety and promote relaxation.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Interactive Breathing</h3>
+                        <p>Interactive breathwork and meditation sessions to induce calm and regulate stress quickly.</p>
+                    </div>
+                </div>
+
+                <h2>What you will get:</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Enhanced Outcomes</h3>
+                        <p>Help clients lower stress, anxiety and pain on-demand.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Pre-Session Relaxation</h3>
+                        <p>Make your therapy time more productive and effective with a VR session before you start.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Evidence-Based Programs</h3>
+                        <p>Deliver scientifically validated VR experiences designed specifically for therapeutic applications.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Practice Differentiation</h3>
+                        <p>Stand out from competitors by offering cutting-edge technology that clients can't find elsewhere.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Therapist Mental Breaks</h3>
+                        <p>Take a moment to center yourself between sessions while clients enjoy their VR experience.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Plug-and-Play Simplicity</h3>
+                        <p>No technical expertise required with a system that works right out of the box with minimal setup.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+                <h2>Trusted by leading mental health professionals</h2>
+                
+                <div class="testimonial">
+                    <blockquote>"Since integrating Novobeing into my practice, I've seen a remarkable 40% reduction in pre-session anxiety among my clients. The VR experiences help them arrive in a much more receptive state, making our therapy sessions significantly more productive."</blockquote>
+                    <cite>Dr. Sarah Mitchell - Licensed Clinical Psychologist, Boston Therapy Center</cite>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>"Novobeing has transformed how I approach therapy with resistant clients. The immersive experiences break down barriers that traditional methods couldn't touch. My clients actually look forward to sessions now, and I'm seeing breakthroughs I never thought possible."</blockquote>
+                    <cite>Dr. Marcus Thompson - Licensed Marriage & Family Therapist, Mindful Healing Practice</cite>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>"As a busy therapist with back-to-back sessions, Novobeing gives me those precious few minutes to center myself while my clients enjoy their VR experience. It's been a game-changer for preventing burnout while improving client outcomes."</blockquote>
+                    <cite>Dr. Jennifer Rodriguez - Licensed Professional Counselor, Wellness & Recovery Associates</cite>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pricing" id="pricing">
+            <div class="container">
+                <h2>Special Limited-Time Offer</h2>
+                <div class="price-card">
+                    <div class="price">$699 one-time + $150/month</div>
+                    <ul class="price-features">
+                        <li>Meta Quest 3 Headset</li>
+                        <li>Full Accessories Kit</li>
+                        <li>Wall Mount</li>
+                        <li>Novobeing Software Suite</li>
+                        <li>50+ Therapeutic Experiences</li>
+                        <li>Premium Support</li>
+                        <li>Regular Content Updates</li>
+                        <li>30-day money-back guarantee</li>
+                    </ul>
+                    <a href="#get-started" class="hero-cta" id="get-started">Yes, I Want This Now →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+

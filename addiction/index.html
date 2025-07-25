@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Treatment Center with Immersive VR Therapy | Novobeing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #4F46E5;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #4F46E5;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        main {
+            margin-top: 80px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-cta {
+            background: #10B981;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .hero-cta:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1F2937;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #DC2626;
+        }
+        
+        .testimonials {
+            background: #F9FAFB;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial blockquote {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial cite {
+            font-weight: 600;
+            color: #DC2626;
+        }
+        
+        .pricing {
+            background: #1F2937;
+            color: white;
+            text-align: center;
+        }
+        
+        .pricing h2 {
+            color: white;
+        }
+        
+        .price-card {
+            background: white;
+            color: #1F2937;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #DC2626;
+            margin-bottom: 1rem;
+        }
+        
+        .price-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .price-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🧠 novobeing</div>
+            <ul class="nav-links">
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#clinical-data">Clinical Data</a></li>
+                <li><a href="#included">What's Included</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <a href="#get-started" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Transform Your Treatment Center with Immersive VR Therapy</h1>
+                <p>Help patients overcome withdrawal symptoms and cravings with evidence-based virtual reality interventions that reduce relapse rates</p>
+                <a href="#get-started" class="hero-cta">Yes, I Want This! →</a>
+            </div>
+        </section>
+
+        <section class="section" id="benefits">
+            <div class="container">
+                <h2>A New Way</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">A first-of-its-kind immersive well-being solution designed to help patients feel calmer, more connected, and in control of their healing journey</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <h3>Therapeutic Experiences</h3>
+                        <p>Evidence-based modules designed to reset the nervous system and enhance mood.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Nature Escapes</h3>
+                        <p>Serene photorealistic landscapes to reduce anxiety and promote relaxation.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Interactive Breathing</h3>
+                        <p>Interactive breathwork and meditation sessions to induce calm and regulate stress quickly.</p>
+                    </div>
+                </div>
+
+                <h2>What you will get:</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Immediate Craving Interruption</h3>
+                        <p>Interrupt cravings instantly through immersive distraction protocols and guided breathwork that reset the nervous system during critical moments of vulnerability.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>24/7 On-Demand Support</h3>
+                        <p>Provide round-the-clock access to therapeutic interventions, reducing emergency calls and staff overtime while ensuring patients have support when they need it most.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Evidence-Based Programs</h3>
+                        <p>Deliver scientifically validated VR experiences designed specifically for therapeutic applications.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Enhanced Therapy Engagement</h3>
+                        <p>Transform resistant patients into active participants with immersive experiences that break down barriers traditional therapy methods can't reach.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Staff Burnout Prevention</h3>
+                        <p>Give your counselors powerful tools to provide consistent, effective support without the constant demand for one-on-one crisis intervention.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Plug-and-Play Simplicity</h3>
+                        <p>No technical expertise required with a system that works right out of the box with minimal setup.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+                <h2>Trusted by leading addiction treatment professionals</h2>
+                
+                <div class="testimonial">
+                    <blockquote>"Being able to have a tool like this to provide on-demand meditation and travel has helped us tremendously. Patients can relax and take a virtual mental health break, manage cravings in real-time and absolutely love this."</blockquote>
+                    <cite>Dr. Michael Chen - Medical Director, Sunrise Recovery Center</cite>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>"When patients are in the thick of detox, traditional talk therapy often falls short - they're too uncomfortable to engage meaningfully. But with Novobeing, we can immediately redirect their focus through immersive breathwork sessions and calming virtual environments."</blockquote>
+                    <cite>Sarah Williams, LCSW - Clinical Director, New Horizons Treatment Center</cite>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>"Novobeing's 24/7 accessibility has transformed our patient satisfaction scores. When patients have cravings at 2 AM, they can access immediate support instead of calling our crisis line. Our staff can focus on complex cases while technology handles routine interventions."</blockquote>
+                    <cite>Dr. Jennifer Martinez - Executive Director, Valley Addiction Recovery Institute</cite>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pricing" id="pricing">
+            <div class="container">
+                <h2>Special Limited-Time Offer</h2>
+                <div class="price-card">
+                    <div class="price">$699 one-time + $150/month</div>
+                    <ul class="price-features">
+                        <li>Meta Quest 3 Headset</li>
+                        <li>Full Accessories Kit</li>
+                        <li>Wall Mount</li>
+                        <li>Novobeing Software Suite</li>
+                        <li>50+ Therapeutic Experiences</li>
+                        <li>Premium Support</li>
+                        <li>Regular Content Updates</li>
+                        <li>30-day money-back guarantee</li>
+                    </ul>
+                    <a href="#get-started" class="hero-cta" id="get-started">Yes, I Want This Now →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
